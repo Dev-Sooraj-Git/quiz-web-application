@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Quiz Test</h2>
+        <form action="process_quiz.php" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="questionImage">Upload Question Image:</label>
+                <input type="file" class="form-control-file" id="questionImage" name="questionImage" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <div id="questionPreview" class="image-preview"></div>
+            </div>
+            <div class="form-group">
+                <label for="optionsImage">Upload Options Image:</label>
+                <input type="file" class="form-control-file" id="optionsImage" name="optionsImage" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <div id="optionsPreview" class="image-preview"></div>
+            </div>
+            <div class="form-group">
+                <label>Select Answer:</label>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="optionA" name="answer" value="A" required>
+                    <label class="form-check-label" for="optionA">Option A</label>
+                </div>
+                <!-- Repeat similar structure for other options (B, C, D, etc.) -->
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
